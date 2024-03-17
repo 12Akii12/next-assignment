@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  background: #E1EFFF;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.rdrInputRanges,
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrMonths,
+.rdrMonthsHorizontal {
+  width: 540px;
+}
+
+.rdrDefinedRangesWrapper {
+  width: 160px !important;
+}
+
+@media (max-width: 480px) {
+  .rdrDateRangePickerWrapper {
+    width: 346px;
+  }
+  .rdrMonths,
+  .rdrMonthsHorizontal {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+  }
+  .rdrMonthAndYearWrapper {
+    width: 200px;
+  }
+  .rdrMonthAndYearPickers {
+    width: 170px;
+  }
+
+  .rdrCalendarWrapper .rdrMonth {
+    width: 240px;
+    color: #000000;
+    font-size: 12px;
+  }
+  .rdrDefinedRangesWrapper {
+    font-size: 10px;
+    width: 110px;
+    border-right: solid 1px #eff2f7;
+    background: #fff;
+  }
+}
